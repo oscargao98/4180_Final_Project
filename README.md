@@ -82,9 +82,9 @@ Two mbed LPC 1768 microcontrollers are used to control all the components. Servo
 ## Source Code
 All source code is included in this repository. Run it by importing the repository into the MBed Cloud Compiler.
 
-(Note: Make sure to import the code for MBed1 and Mbed2 separately.)
+(Note: Make sure to import 1_garden for MBed1 and 2_garden for Mbed2, respectively.)
 
-Main.ccp for Mbed1
+main.ccp for Mbed1
 
 ```cpp
 #include "mbed.h"
@@ -317,6 +317,42 @@ int main() {
 }
 ```
 
+main.cpp for Mbed2
+
+```cpp
+#include "mbed.h"
+#include "Servo.h"
+
+Servo Pipe(p24);
+Servo Shade(p23);
+PwmOut led1(LED1);
+PwmOut led2(LED2);
+Serial pc(USBTX, USBRX); // tx, rx
+DigitalIn Shade_sig(p21);
+DigitalIn Pipe_sig(p22);
+
+
+int main(){
+    wait(1);
+    while(1){
+        if (Shade_sig) {
+            Shade = 0.2;
+        }
+        else {
+            Shade = 1.0;
+        }
+            
+        if (Pipe_sig) {
+            Pipe = 0.9;
+        }
+        else {
+            Pipe = 0.2;
+        }
+        wait(1);
+    }
+    
+}
+```
 
 ## Future Direction
 During 2020's Black Friday, after failing to acquire a Sony Playstation 5, Yuyan decided to go on Adafruit.com and ordered a Raspberry Pi 4 and a wifi chip (ESP8266). We will likely replace Mbed1 with the Raspberry Pi, which can send users email notifications when the water level is low. By interfacing Mbed2 with the wifi chip, We will add IoT functionalities to this device, allowing users to monitor and manage their plants through a cloud server. Please check back as we continue our build.
