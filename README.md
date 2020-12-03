@@ -26,7 +26,7 @@ We love our desk plants: They make our room prettier, and they make us feel good
 
 Our idea for the ECE-4180(Fall 2020)'s final project is to build a smart desk gardening solution. This is a smart machine that takes care of user’s indoor plant. It is an automated device that it controlled by two Mbed microcontrollers: one controls two motors and the other one controls other functions. It blocks direct sunlight when the ambient light level is too intense, and provide additional light when there's not enough sunlight. It has a water level sensor attached to a water container. When the water level is low, it alerts the homeowner by sounding an alarm and light up a warning light, urging them to refill. It senses the soil moisture level twice a day: When the moisture level is low, it waters the plant by controlling a pipe attached to the water container. It has an easy-to-use user interface consisted of a LCD screen and six pushbuttons, which displays the environmental values (light level, soil moisture level, and water level) and allows users to set desired light level and moisture level based on the species of their plant.
 
-![block diagram](https://github.com/oscargao98/4180_Final_Project/blob/main/block_new.png)
+![block diagram](https://github.com/oscargao98/4180_Final_Project/blob/main/block_final.png)
 Block diagram of our device.
 
 ## Parts List
