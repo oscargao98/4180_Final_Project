@@ -80,13 +80,13 @@ Two mbed LPC 1768 microcontrollers are used to control all the components. Servo
 (Note: Use of external 5v power is REQUIRED, because we need enough current to drive servos and the LED array. Connect everything to a common ground.)
 
 ## Source Code
-All source code is included in this repository. Run it by importing the repository into the MBed Cloud Compiler.
+All source code is included in this repository. Run it by importing the repository into the MBed Cloud Compiler. Make sure to included all the libraries.
 
-(Note: Make sure to import the code for MBed1 and Mbed2 separately.)
+(Note: Make sure to import 1_garden for MBed1 and 2_garden for Mbed2, respectively.)
 
-Main.ccp for Mbed1
+main.ccp for Mbed1
 
-``cpp
+```cpp
 #include "mbed.h"
 #include "uLCD_4DGL.h"
 #include "PinDetect.h"
@@ -314,6 +314,43 @@ int main() {
         } else if (water<.2){led = !led;}
         Thread::wait(100); // every .1 second
     }
+}
+```
+
+main.cpp for Mbed2
+
+```cpp
+#include "mbed.h"
+#include "Servo.h"
+
+Servo Pipe(p24);
+Servo Shade(p23);
+PwmOut led1(LED1);
+PwmOut led2(LED2);
+Serial pc(USBTX, USBRX); // tx, rx
+DigitalIn Shade_sig(p21);
+DigitalIn Pipe_sig(p22);
+
+
+int main(){
+    wait(1);
+    while(1){
+        if (Shade_sig) {
+            Shade = 0.2;
+        }
+        else {
+            Shade = 1.0;
+        }
+            
+        if (Pipe_sig) {
+            Pipe = 0.9;
+        }
+        else {
+            Pipe = 0.2;
+        }
+        wait(1);
+    }
+    
 }
 ```
 
