@@ -10,11 +10,13 @@ Presentation (5min): https://youtu.be/BhbdnVkSK4Q
 
 Demonstration (5min): https://youtu.be/sSNZYDFUwvU
 
+![A nice picture of us](https://github.com/oscargao98/4180_Final_Project/blob/main/heying.png)
+
+
 ## Table of Content
 * [Project Idea](#project-idea)
 * [Parts List](#parts-list)
 * [Schematic and Connection Guide](#schematic-and-connection-guide)
-* [Device Setup](#device-setup)
 * [Source Code](#source-code)
 * [Future Direction](#future-direction)
 
