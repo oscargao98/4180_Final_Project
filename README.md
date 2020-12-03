@@ -6,9 +6,9 @@
 
 Watch our video presentation and demo:
 
-Presentation (5min): https://www.youtube.com/embed/BhbdnVkSK4Q
+Presentation (5min): https://www.youtube.com/BhbdnVkSK4Q
 
-Demonstration (5min):https://www.youtube.com/embed/sSNZYDFUwvU
+Demonstration (5min):https://www.youtube.com/sSNZYDFUwvU
 
 ## Table of Content
 * [Project Idea](#project-idea)
