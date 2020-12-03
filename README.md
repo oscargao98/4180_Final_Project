@@ -80,7 +80,7 @@ Two mbed LPC 1768 microcontrollers are used to control all the components. Servo
 (Note: Use of external 5v power is REQUIRED, because we need enough current to drive servos and the LED array. Connect everything to a common ground.)
 
 ## Source Code
-All source code is included in this repository. Run it by importing the repository into the MBed Cloud Compiler.
+All source code is included in this repository. Run it by importing the repository into the MBed Cloud Compiler. Make sure to included all the libraries.
 
 (Note: Make sure to import 1_garden for MBed1 and 2_garden for Mbed2, respectively.)
 
