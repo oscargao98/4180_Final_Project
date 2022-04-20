@@ -356,8 +356,5 @@ int main(){
 }
 ```
 
-## Future Direction
-During 2020's Black Friday, after failing to acquire a Sony Playstation 5, Yuyan decided to go on Adafruit.com and ordered a Raspberry Pi 4 and a wifi chip (ESP8266). We will likely replace Mbed1 with the Raspberry Pi, which can send users email notifications when the water level is low. By interfacing Mbed2 with the wifi chip, We will add IoT functionalities to this device, allowing users to monitor and manage their plants through a cloud server. Please check back as we continue our build.
-
 
 
